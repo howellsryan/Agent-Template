@@ -8,17 +8,26 @@ A starting point for setting up a new repository for AI-agent-assisted developme
 template/
 ├── CLAUDE.md                    → copy to repo root, fill in the placeholders
 ├── SKILLS.md                    → copy to repo root, keep in sync as you add skills/rules
-└── .claude/
-    ├── skills/                  → model-invoked skills (fire automatically by description match)
-    │   ├── plan-gate/
-    │   ├── scope-fence/
-    │   ├── memory-hygiene/
-    │   ├── ruthless-editor/
-    │   └── pr-changelog/
-    └── rules/                   → path-scoped rules (auto-load when matching files are touched)
-        ├── README.md
-        └── example-rule.md
+├── .claude/
+│   ├── skills/                  → model-invoked skills (fire automatically by description match)
+│   │   ├── plan-gate/
+│   │   ├── scope-fence/
+│   │   ├── memory-hygiene/
+│   │   ├── ruthless-editor/
+│   │   └── pr-changelog/
+│   └── rules/                   → path-scoped rules (auto-load when matching files are touched)
+│       ├── README.md
+│       └── example-rule.md
+└── library/                     → BROWSEABLE CATALOG of domain skills, by distinction (inactive shelf)
+    ├── backend/ frontend/ design/ productivity/
+    ├── token-efficiency/ testing-and-quality/ security/ devops/
+    └── README.md                → the catalog index + how to consume
 ```
+
+## Two halves: the active template and the library
+
+- **The template** (`CLAUDE.md`, `SKILLS.md`, `.claude/`) is the config you copy to your repo root and adapt. Its five skills are domain-agnostic *behavioural* disciplines — how to work carefully in any repo.
+- **The [`library/`](library/README.md)** is a one-stop-shop catalog of *domain-specific* skills grouped by distinction — backend, frontend, design, productivity, token-efficiency, testing, security, devops. Each category folder has a README explaining what the distinction is, its skills, and when to use them or not. **Nothing in `library/` is active** — it lives outside `.claude/skills/` on purpose, so no agent auto-loads it. You browse it, then copy the skills you want into your repo's `.claude/skills/`. Start at [`library/README.md`](library/README.md).
 
 ## How to use this
 

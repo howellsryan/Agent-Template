@@ -58,7 +58,24 @@ Keep this table current — it's the fastest way for a human (or a fresh agent s
 - Exception: read-only, broad-fan-out search agents — they keep file dumps out of the main context and return only conclusions.
 - In-session discipline (output shaping, effort routing, narrow reads) belongs in `CLAUDE.md` and applies always.
 
-## 6) Maintenance
+## 6) The library — a browseable catalog of domain skills
+
+Beyond the five active behavioural skills above, this repo ships a **`library/`** directory: a one-stop-shop catalog of domain-specific skills grouped by distinction. It is **inactive by design** — it lives outside `.claude/skills/`, so no agent (including this repo's own) auto-loads it. It's a shelf to browse and copy from, not a running config.
+
+| Category | Skills |
+|---|---|
+| [`backend/`](library/backend/) | `contract-first-api`, `migration-safety`, `idempotent-writes` |
+| [`frontend/`](library/frontend/) | `full-state-ui`, `accessible-by-default`, `state-colocation` |
+| [`design/`](library/design/) | `design-tokens-first`, `visual-hierarchy` (+ cross-refs to built-in `artifact-design`, `dataviz`) |
+| [`productivity/`](library/productivity/) | `checklist-driven-work`, `small-reversible-steps` (+ base `plan-gate`, `scope-fence`) |
+| [`token-efficiency/`](library/token-efficiency/) | `output-shaping`, `narrow-context-intake`, `subagent-economy` |
+| [`testing-and-quality/`](library/testing-and-quality/) | `test-with-change`, `reproduce-before-fix`, `diff-self-review` |
+| [`security/`](library/security/) | `server-authoritative`, `validate-at-boundary`, `secrets-hygiene` |
+| [`devops/`](library/devops/) | `reproducible-environment`, `ci-is-the-gate` |
+
+Each category has a `README.md` covering what the distinction represents, its skills, how to consume them, and when to / not to. Consuming a skill = copy its folder into your `.claude/skills/`, localise the `<placeholders>`, register it here. Full flow and authoring guidance in [`library/README.md`](library/README.md). The authoring practices in §4 apply to any skill you add to the library.
+
+## 7) Maintenance
 
 - A skill that keeps misfiring → fix its description first, body second.
 - New skill/rule → add it to the inventory here and to the `CLAUDE.md` skills list in the same change.
