@@ -23,6 +23,10 @@ They pair with the base template's `plan-gate` (write the plan before novel/mult
 | [`checklist-driven-work`](skills/checklist-driven-work/SKILL.md) | Multi-step / multi-area tasks | Decompose into an explicit, visible, updated checklist; nothing dropped |
 | [`small-reversible-steps`](skills/small-reversible-steps/SKILL.md) | Large or long-running changes | Small increments, each leaving the build/tests green and individually revertible |
 
+> **These co-fire by design.** A big multi-file feature matches `plan-gate`, `checklist-driven-work`, and `small-reversible-steps` at once — that's intended: plan it, track it, ship it in reversible pieces. They complement rather than compete, so loading all three together is fine.
+>
+> **Check `checklist-driven-work` against your default first.** Todo-list decomposition is increasingly built into agent harnesses. Per the library's "encode only what beats the default" rule, copy this one only if your agent doesn't already track multi-step work reliably on its own.
+
 ## Related base-template skills
 
 - **`plan-gate`** — the written plan before the first edit on novel/multi-system work.

@@ -25,6 +25,8 @@ They're about *earning confidence*, cheaply and at the right moment — not abou
 | [`reproduce-before-fix`](skills/reproduce-before-fix/SKILL.md) | Fixing a bug | A failing test that reproduces the bug *first*, then the fix that turns it green |
 | [`diff-self-review`](skills/diff-self-review/SKILL.md) | Before "done" | Read your own diff as a reviewer would; catch debris, gaps, and scope creep |
 
+`diff-self-review` overlaps the base template's `scope-fence` on one axis — both police scope creep — but adds passes `scope-fence` doesn't: hunting leftover debug/debris, checking the change is actually complete, and a cold correctness re-read of the whole diff. If you already run `scope-fence`, `diff-self-review` is the final "read it as a reviewer would" sweep on top, not a duplicate.
+
 ## Rules for this area (path-scoped)
 
 If your repo has non-obvious testing conventions — a specific runner, a fixtures pattern, "integration over unit here", a coverage gate — a rule scoped to your test directory carries them so every session applies them:

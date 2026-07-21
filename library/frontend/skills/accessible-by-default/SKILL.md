@@ -9,7 +9,7 @@ Accessibility retrofitted is a rewrite: a `<div onClick>` that should have been 
 
 ## The floor (non-negotiable, cheap when done first)
 
-1. **Semantic elements over generic ones.** `<button>` for actions, `<a href>` for navigation, `<label>` tied to every input, real headings (`<h1>`–`<h3>`) for structure, `<nav>`/`<main>`/`<ul>` where they fit. You get keyboard behaviour, focus, and roles for free. A clickable `<div>` gives you none of it.
+1. **Semantic elements over generic ones.** `<button>` for actions, `<a href>` for navigation, `<label>` tied to every input, real headings (`<h1>`–`<h6>`) in order for structure, `<nav>`/`<main>`/`<ul>` where they fit. You get keyboard behaviour, focus, and roles for free. A clickable `<div>` gives you none of it.
 2. **Keyboard operable.** Everything you can do with a mouse works with Tab + Enter/Space. If you must make a non-semantic element interactive, you owe it `role`, `tabindex="0"`, and key handlers — which is why the semantic element is less work.
 3. **Visible focus.** Never `outline: none` without a replacement. Keyboard users navigate by the focus ring; removing it blinds them.
 4. **Labels & names.** Every input has an associated label; every icon-only button has an accessible name (`aria-label`). A screen reader announces the name — "button" alone is useless.

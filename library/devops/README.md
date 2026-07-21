@@ -36,7 +36,7 @@ paths:
 ---
 ```
 
-Put the "how our CI is structured", the required checks, and the deploy sequence in it. This template itself ships a `session-start-hook` skill for making web sessions reproducibly able to run your tests/linters — pair it with this category.
+Put the "how our CI is structured", the required checks, and the deploy sequence in it. Claude Code provides a built-in `session-start-hook` skill for making web sessions reproducibly able to run your tests/linters — pair it with this category.
 
 ## Consuming these
 

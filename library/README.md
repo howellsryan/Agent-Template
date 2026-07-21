@@ -59,7 +59,7 @@ Rules (path-scoped `.claude/rules/*`) are inherently repo-specific — they key 
 
 ## Authoring or contributing a skill
 
-Follow the same practices the base template documents in `SKILLS.md §4`: the description is the contract (state the trigger AND the non-trigger), encode only what beats the default, exact examples over abstractions, prune overlap in the same change. Anthropic's own guidance — concise SKILL.md, progressive disclosure, one level of file references, gerund/noun naming — is worth reading before you add one.
+Follow the same practices the base template documents in `SKILLS.md §4`: the description is the contract (state the trigger AND the non-trigger), encode only what beats the default, exact examples over abstractions, prune overlap in the same change. Anthropic's own guidance — concise SKILL.md, progressive disclosure, one level of file references — is worth reading before you add one. On naming: this library uses short verb/adjective forms (`idempotent-writes`, `reproduce-before-fix`) to match the base template's house style; Anthropic suggests gerund/noun forms (`writing-tests`, `test-writing`). Either works — pick one and stay consistent across your set.
 
 ---
 

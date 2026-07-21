@@ -34,11 +34,10 @@ A design-system or component-library directory is a strong candidate for a path-
 paths:
   - "src/components/**"
   - "src/ui/**"
-  - "**/*.tsx"
 ---
 ```
 
-Keep the glob tight enough that it only loads for sessions actually touching UI — an overly broad `**/*.tsx` will load it for backend-in-TS work too.
+Keep the glob tight enough that it only loads for sessions actually touching UI — reach for a directory scope like the above, not a broad `**/*.tsx`, which would also load the rule for backend-in-TypeScript work.
 
 ## Related built-ins
 

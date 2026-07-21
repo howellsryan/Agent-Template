@@ -1,6 +1,6 @@
 ---
 name: narrow-context-intake
-description: Use before reading files, searching a codebase, or fetching external content. Enforces pulling only what the task needs - targeted searches, file-list results before full-content, ranged reads, no re-reading what's already in context, no just-in-case fetching. Do not use to justify skipping genuinely necessary reads - under-reading and guessing is its own failure.
+description: Use before a broad or exploratory pass over a codebase - searching, scanning or reading many files, or fetching external content to orient yourself. Enforces pulling only what the task needs - targeted searches, file-list results before full-content, ranged reads, no re-reading what's already in context, no just-in-case fetching. Do not use to justify skipping genuinely necessary reads - under-reading and guessing is its own failure.
 ---
 
 # narrow-context-intake: read like context is expensive, because it is

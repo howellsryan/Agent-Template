@@ -35,4 +35,4 @@ Token discipline is behavioural and applies every session, so its home is `CLAUD
 
 ## Consuming these
 
-These are the most directly reusable skills in the library — near-zero localisation. Copy into `.claude/skills/`, or fold their guidance straight into your `CLAUDE.md §13` if you prefer it always-on rather than triggered. See the [library index](../README.md#consuming-a-skill).
+These are the most directly reusable skills in the library — near-zero localisation. Copy into `.claude/skills/`, **or** fold their guidance straight into your `CLAUDE.md §13` if you prefer it always-on rather than triggered — but not both, or you pay for the same guidance twice (the exact anti-pattern this category warns against). `output-shaping` in particular restates `CLAUDE.md §13`; pick one home for it. See the [library index](../README.md#consuming-a-skill).

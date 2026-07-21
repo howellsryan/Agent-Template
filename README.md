@@ -5,9 +5,10 @@ A starting point for setting up a new repository for AI-agent-assisted developme
 ## What's in here
 
 ```
-template/
+<repo root>/                     → this repo IS the template; copy the pieces below into yours
 ├── CLAUDE.md                    → copy to repo root, fill in the placeholders
 ├── SKILLS.md                    → copy to repo root, keep in sync as you add skills/rules
+├── LICENSE
 ├── .claude/
 │   ├── skills/                  → model-invoked skills (fire automatically by description match)
 │   │   ├── plan-gate/
@@ -26,7 +27,7 @@ template/
 
 ## Two halves: the active template and the library
 
-- **The template** (`CLAUDE.md`, `SKILLS.md`, `.claude/`) is the config you copy to your repo root and adapt. Its five skills are domain-agnostic *behavioural* disciplines — how to work carefully in any repo.
+- **The template** (`CLAUDE.md`, `SKILLS.md`, `.claude/`) is the config you copy to your repo root and adapt. Its five skills are *behavioural* disciplines — four domain-agnostic (`plan-gate`, `scope-fence`, `memory-hygiene`, `ruthless-editor`) plus `pr-changelog`, a domain-specific worked example — about *how* to work carefully, not what your product does.
 - **The [`library/`](library/README.md)** is a one-stop-shop catalog of *domain-specific* skills grouped by distinction — backend, frontend, design, productivity, token-efficiency, testing, security, devops. Each category folder has a README explaining what the distinction is, its skills, and when to use them or not. **Nothing in `library/` is active** — it lives outside `.claude/skills/` on purpose, so no agent auto-loads it. You browse it, then copy the skills you want into your repo's `.claude/skills/`. Start at [`library/README.md`](library/README.md).
 
 ## How to use this
