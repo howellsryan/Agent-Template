@@ -2,7 +2,7 @@
 
 ## What this distinction is
 
-DevOps here is the discipline of making things happen the *same way every time* — the build, the setup, the deploy, the checks — so that "it worked once" becomes "it works for everyone, every time". Agents undermine this in two classic ways: they set things up with unpinned, drifting dependencies so a fresh clone behaves differently, and they treat a failing CI run as noise to retry rather than a signal to fix, hammering "re-run" until it flukes green. These skills target both: **a reproducible environment** anyone (human or agent) can stand up deterministically, and **CI as the real gate** where red means fix-the-cause, not retry.
+DevOps here is making things happen the *same way every time* — build, setup, deploy, checks — so "it worked once" becomes "it works for everyone, every time". Agents undermine this two ways: unpinned, drifting dependencies so a fresh clone behaves differently, and treating a red CI run as noise to retry rather than a signal to fix, hammering "re-run" until it flukes green. These skills target both: **a reproducible environment** anyone can stand up deterministically, and **CI as the real gate** where red means fix-the-cause, not retry.
 
 This is deliberately the smallest category — most DevOps knowledge is repo- and platform-specific (your CI provider, your deploy target) and belongs in *your* config and rules, not a generic catalog. What's here is the two habits that generalise.
 

@@ -12,7 +12,7 @@ Agent context is priced per session. Everything here is organised so a session o
 | **Path-scoped rules** | `.claude/rules/*.md` | Auto, when a touched file matches the rule's `paths:` globs | Paid only by sessions touching that area |
 | **Skills** | `.claude/skills/*/SKILL.md` | Name + description always visible (~100 tokens total); full body loads only when the task matches the description | Near-free when dormant |
 
-This mirrors the progressive-disclosure model Anthropic published for [Agent Skills](https://www.anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills), an open standard since December 2025 ([agentskills.io](https://agentskills.io)) adopted by OpenAI, Google, GitHub, and Cursor. Skills hot-reload — edits to `.claude/skills/` apply without restarting a session.
+This mirrors the progressive-disclosure model Anthropic published for [Agent Skills](https://www.anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills), now an open standard ([agentskills.io](https://agentskills.io)). Skills hot-reload — edits to `.claude/skills/` apply without restarting a session.
 
 **Placement rule** (from the `memory-hygiene` skill): applies every session → `CLAUDE.md`. Applies to specific files → path-scoped rule. A workflow/recipe/behavioural discipline → skill. Reference detail → this file or `docs/`.
 
@@ -64,13 +64,14 @@ Beyond the five active behavioural skills above, this repo ships a **`library/`*
 
 | Category | Skills |
 |---|---|
-| [`backend/`](library/backend/) | `contract-first-api`, `migration-safety`, `idempotent-writes` |
+| [`backend/`](library/backend/) | `contract-first-api`, `migration-safety`, `idempotent-writes`, `resilient-calls`, `observable-by-default` |
 | [`frontend/`](library/frontend/) | `full-state-ui`, `accessible-by-default`, `state-colocation` |
 | [`design/`](library/design/) | `design-tokens-first`, `visual-hierarchy` (+ cross-refs to built-in `artifact-design`, `dataviz`) |
 | [`productivity/`](library/productivity/) | `checklist-driven-work`, `small-reversible-steps` (+ base `plan-gate`, `scope-fence`) |
+| [`performance/`](library/performance/) | `measure-before-optimizing`, `avoid-n-plus-1` |
 | [`token-efficiency/`](library/token-efficiency/) | `output-shaping`, `narrow-context-intake`, `subagent-economy` |
 | [`testing-and-quality/`](library/testing-and-quality/) | `test-with-change`, `reproduce-before-fix`, `diff-self-review` |
-| [`security/`](library/security/) | `server-authoritative`, `validate-at-boundary`, `secrets-hygiene` |
+| [`security/`](library/security/) | `server-authoritative`, `validate-at-boundary`, `secrets-hygiene`, `vet-new-dependencies` |
 | [`devops/`](library/devops/) | `reproducible-environment`, `ci-is-the-gate` |
 
 Each category has a `README.md` covering what the distinction represents, its skills, how to consume them, and when to / not to. Consuming a skill = copy its folder into your `.claude/skills/`, localise the `<placeholders>`, register it here. Full flow and authoring guidance in [`library/README.md`](library/README.md). The authoring practices in §4 apply to any skill you add to the library.

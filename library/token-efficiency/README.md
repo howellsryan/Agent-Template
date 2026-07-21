@@ -2,7 +2,7 @@
 
 ## What this distinction is
 
-Every token an agent reads or writes is paid for, on every session, and the more junk in the context the worse the model's attention on what matters. This distinction is about keeping sessions **cheap, fast, and sharp**: saying the answer without the padding, reading only what the task needs, and spending expensive subagents only where they earn it. It's the discipline that makes the *whole progressive-disclosure architecture* of this template pay off — no point in a lean `CLAUDE.md` if the agent then dumps four files it didn't need into context and writes six paragraphs to report a one-line change.
+Every token an agent reads or writes is paid for on every session, and clutter in the context degrades the model's attention on what matters. This distinction keeps sessions **cheap, fast, and sharp**: answer without padding, read only what the task needs, spend subagents only where they earn it. It's what makes the template's progressive-disclosure architecture pay off — a lean `CLAUDE.md` is wasted if the agent then dumps four unneeded files into context and writes six paragraphs to report a one-line change.
 
 The base template's `CLAUDE.md §13` already carries the short form of this as always-on guidance. These skills are the expanded, copy-into-your-repo versions for teams that want it as explicit, triggerable discipline.
 

@@ -2,7 +2,7 @@
 
 ## What this distinction is
 
-Productivity here means **execution discipline**, not typing speed. An agent with a correct idea still fails when it tackles a ten-step task as one shapeless push, drops step 6, and ends the session with a half-applied change nobody can review. These skills encode the two habits that keep long or multi-part work legible and safe to unwind: **decomposing into a tracked checklist** so nothing is silently dropped, and **working in small reversible steps** so any point in the work is a clean place to stop, review, or roll back.
+Productivity here means **execution discipline**, not typing speed. An agent with a correct idea still fails when it takes a ten-step task as one shapeless push, drops step 6, and ends with a half-applied change nobody can review. These skills keep long work legible and safe to unwind: **a tracked checklist** so nothing is silently dropped, and **small reversible steps** so any point is a clean place to stop, review, or roll back.
 
 They pair with the base template's `plan-gate` (write the plan before novel/multi-system work) and `scope-fence` (change only what was asked). Those two decide *whether and what*; these two govern *how you carry it out*.
 

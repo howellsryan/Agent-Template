@@ -2,7 +2,7 @@
 
 ## What this distinction is
 
-The difference between "I made the change" and "the change works" is a test that can tell them apart. Agents are fluent at producing plausible code and weak at proving it correct — they'll declare victory on unrun code, patch a bug they never reproduced (so they can't know it's fixed), and skip the self-review pass that would have caught the obvious mistake. These skills close that gap with three habits: **write the test alongside the change**, **reproduce a bug before fixing it**, and **review your own diff before calling it done**.
+The difference between "I made the change" and "the change works" is a test that can tell them apart. Agents are fluent at producing plausible code and weak at proving it correct — declaring victory on unrun code, patching a bug they never reproduced (so they can't know it's fixed), skipping the self-review that would have caught the obvious mistake. These skills close the gap with three habits: **test alongside the change**, **reproduce a bug before fixing it**, and **review your own diff before calling it done**.
 
 They're about *earning confidence*, cheaply and at the right moment — not about coverage vanity metrics.
 

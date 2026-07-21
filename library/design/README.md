@@ -2,7 +2,7 @@
 
 ## What this distinction is
 
-Design is the layer above frontend behaviour: not "does the button work" but "does this screen read clearly, feel consistent, and hold together as one system". Agents are competent at making something *function* and weak at making it *cohere* — they pick arbitrary hex colors, invent one-off spacing, and pile on decoration before establishing what the eye should see first. These skills push toward the two habits that separate designed-looking work from assembled-looking work: **using a system's tokens instead of magic values**, and **establishing hierarchy before polish**.
+Design is the layer above frontend behaviour: not "does the button work" but "does the screen read clearly and hold together as one system". Agents are good at making things *function* and weak at making them *cohere* — arbitrary hex colors, one-off spacing, decoration piled on before there's a focal point. These skills push the two habits that separate designed-looking work from assembled: **tokens instead of magic values**, and **hierarchy before polish**.
 
 This category is about *visual and structural craft*. Behaviour, state, and accessibility live in [`frontend/`](../frontend/) (though accessibility and design overlap — contrast is both).
 

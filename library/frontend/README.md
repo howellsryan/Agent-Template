@@ -2,7 +2,7 @@
 
 ## What this distinction is
 
-Frontend is where correctness meets human beings. The backend can be flawless and the product still broken because a spinner never resolved, a form couldn't be reached by keyboard, or global state re-rendered the world on every keystroke. These skills target the failures agents ship most often when building UI: **skipping the states that aren't the happy path**, **treating accessibility as a later audit instead of a build-time property**, and **putting state in the wrong place** so the app becomes a tangle of re-renders and prop-drilling.
+Frontend is where correctness meets human beings. A flawless backend still ships a broken product if a spinner never resolves, a form can't be reached by keyboard, or global state re-renders the world on every keystroke. These skills target the failures agents ship most when building UI: **skipping the non-happy-path states**, **treating accessibility as a later audit rather than a build-time property**, and **placing state wrong** so the app becomes a tangle of re-renders and prop-drilling.
 
 They're framework-agnostic — React, Vue, Svelte, Solid, plain DOM. They encode *what a robust component accounts for*, not which library renders it.
 

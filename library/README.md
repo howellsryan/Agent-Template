@@ -18,7 +18,8 @@ That separation is deliberate: a one-stop-shop should let you read every option 
 | [`productivity/`](productivity/) | Execution discipline: checklists, small reversible steps | your agent sessions sprawl or drop steps on big tasks |
 | [`token-efficiency/`](token-efficiency/) | Session cost & speed: output shaping, narrow intake, subagent economy | sessions feel slow, expensive, or bloated |
 | [`testing-and-quality/`](testing-and-quality/) | Confidence: tests-with-change, reproduce-before-fix, self-review | changes ship without a way to know they worked |
-| [`security/`](security/) | Trust boundaries: server authority, secrets, input validation | anything you build touches auth, money, or untrusted input |
+| [`security/`](security/) | Trust boundaries: server authority, input validation, secrets, dependency vetting | anything you build touches auth, money, untrusted input, or new dependencies |
+| [`performance/`](performance/) | Earned speed: measure-before-optimizing, avoid-n-plus-1 | you're tuning on a hunch, or a loop quietly does I/O per row |
 | [`devops/`](devops/) | Repeatability: reproducible setup, CI as the gate | "works on my machine" or green-by-retry keeps biting |
 
 Each category folder has its own `README.md` that explains what the distinction represents, lists its skills, and says when to reach for them and when not to.
