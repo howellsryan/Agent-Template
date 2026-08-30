@@ -1,36 +1,33 @@
-# CLAUDE.md — External Agent Resource Catalogue
+# CLAUDE.md — Agent Resource Catalogue
 
 ## Purpose
 
-This repository is a **pointer-only catalogue of external agent skills, rules, and helpers**. It exists to make useful upstream resources easy to rediscover without vendoring their implementations.
+This repository is a curated catalogue of external Agent Skills resources plus a small `bespoke/` area for original reusable agent workflows maintained here.
 
-## Non-negotiables
+## Boundaries
 
-- Only catalogue resources whose canonical source is an external repository.
-- Never add copied third-party `SKILL.md` bodies, nested rules, scripts, datasets, or licence files.
-- Never use a downstream/local project as a source link or record where a resource is used.
-- Every card must link directly to the canonical upstream GitHub repository or skill path.
-- `SKILLS.md` is the top-level inventory and must stay in sync with `catalog/`.
-- If provenance is uncertain, omit the card until the upstream source is verified.
+### `catalog/` — external pointer-only
 
-## Card format
+- Never copy third-party `SKILL.md` bodies, scripts, reference folders, rules, datasets, or licence files into `catalog/`.
+- Every card links to a canonical external GitHub source.
+- Do not record downstream/private project usage or local copies.
+- Large libraries belong under `catalog/sources/` as repository cards; individual skills worth bookmarking may also have cards in the functional category folders.
+- Dated adoption research must state that stars/forks/activity are proxies, not exact usage counts.
 
-Each card should contain:
+### `bespoke/` — original full assets
 
-- **What it does** — one short practical summary.
-- **Source** — canonical GitHub repository/skill path.
-- **Get the latest** — how to obtain the current upstream version.
-- **Notes** — optional upstream-specific detail only.
+- Full files are allowed only for first-party material intentionally published as reusable open-source agent infrastructure.
+- Each bespoke package needs a README explaining provenance, install shape, dependencies, and which files are essential vs optional.
+- If a bespoke workflow depends on an external skill, link upstream instead of copying it unless licence/provenance and the reason for vendoring are explicit.
+- Keep bespoke packages portable: remove product-specific paths, commands, section numbers, and domain invariants unless the package is explicitly domain-specific.
 
-Do not include “used in”, local-copy, fork, adaptation, or project-history fields.
+## Inventory
 
-## Categories
-
-- `catalog/workflow-hygiene/` — externally sourced workflow/debugging disciplines.
-- `catalog/ui-ux/` — interface design and review resources.
-- `catalog/frontend-engineering/` — React/component/performance guidance.
-- `catalog/threejs/` — Three.js reference skills.
+- `SKILLS.md` is the top-level human index.
+- `catalog/README.md` defines reference-card conventions.
+- `catalog/sources/README.md` contains the current ecosystem research snapshot.
+- `bespoke/delivery-loop/` is the canonical first-party delivery workflow in this repository.
 
 ## Updating
 
-Before adding or refreshing a card, verify the upstream repository and path still exist. Prefer a stable upstream install command when the project documents one; otherwise link the source and instruct the reader to fetch the current skill directory from upstream.
+Before adding an external source, verify that the upstream repository still exists, is active enough to be useful, and is actually a skill library/standard/index rather than a coincidental search match. Before changing a bespoke package, keep its README, skill files, companion files, and install instructions consistent in the same change.

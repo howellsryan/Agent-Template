@@ -1,23 +1,27 @@
 # Catalogue conventions
 
-Cards are intentionally small. They answer three questions: **what does this do, where is the canonical upstream source, and how do I get the latest version?**
+`catalog/` is **external-source only**. It is intentionally pointer-first so this repository stays useful without becoming a stale vendor mirror.
 
-## Inclusion rule
+## Individual skill cards
 
-A card belongs here only when the resource comes from an **external repository** and its upstream source can be verified. Do not add first-party workflows, project-specific recipes, downstream adaptations, or synthesized guidance.
+Functional folders (`workflow-hygiene/`, `ui-ux/`, `frontend-engineering/`, `threejs/`) contain small cards for specific skills worth bookmarking.
 
-## Card shape
+A card should answer:
 
-```md
-# name
+- **What it does** — one practical summary.
+- **Source** — the canonical upstream GitHub path.
+- **Get the latest** — upstream install/fetch guidance when known.
+- **Notes** — optional upstream-only detail.
 
-**What it does:** ...
+## Source repository cards
 
-**Source:** https://github.com/<upstream-owner>/<repo>/...
+`catalog/sources/` captures prominent skill libraries, specialist collections, standards, and discovery indexes. Very large repositories get **one source card**, not hundreds of copied or hand-maintained skill cards.
 
-**Get the latest:** ...
+Source cards may include a dated GitHub adoption snapshot, but stars/forks/activity are only discovery proxies. Exact installations are generally not public.
 
-**Notes:** optional upstream-only detail.
-```
+## What never belongs here
 
-Do not include local repository names, “used in” fields, copied implementation text, nested rule files, scripts, datasets, or licences.
+- copied external `SKILL.md` bodies;
+- scripts, datasets, nested reference directories, or licences copied from upstream;
+- downstream/private project links or “used in” fields;
+- first-party workflows (those belong under `bespoke/`).

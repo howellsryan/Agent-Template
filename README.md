@@ -1,26 +1,32 @@
 # Agent Template Catalogue
 
-A lightweight, open-source catalogue of **external** agent skills, rules, and helpers that are useful enough to keep bookmarked for future projects.
+An open-source catalogue for useful agent skills, rules, helpers, and agentic workflow patterns.
 
-**This repository is a reference index, not a vendor mirror.** It does not store third-party skill bodies or copies from other projects. Each card gives a short explanation, the canonical upstream GitHub source, and the quickest route to the latest version.
+The repository has two deliberately different zones:
+
+- **`catalog/` — external references only.** Third-party implementations stay in their upstream repositories. Cards explain what a resource does, where the canonical source lives, and how to find the current version.
+- **`bespoke/` — first-party reusable assets.** Original workflows created for this catalogue may live here in full, including their supporting files, so they can be copied into another project as a coherent package.
 
 ## Layout
 
 ```text
 catalog/
-├── workflow-hygiene/       # debugging and completion discipline
-├── ui-ux/                  # visual design and interface review
-├── frontend-engineering/   # React/component architecture and performance
-└── threejs/                # Three.js reference skills
+├── workflow-hygiene/       # individual external workflow/debugging skills
+├── ui-ux/                  # individual UI/UX skill references
+├── frontend-engineering/   # individual frontend skill references
+├── threejs/                # individual Three.js skill references
+└── sources/                # prominent upstream skill repositories and ecosystem indexes
+
+bespoke/
+└── delivery-loop/          # full first-party single-session delivery workflow
 ```
 
-Start with [`SKILLS.md`](SKILLS.md) for the complete inventory or [`catalog/README.md`](catalog/README.md) for the catalogue conventions.
+Start with [`SKILLS.md`](SKILLS.md) for the human-readable inventory. The current ecosystem research and ranking methodology lives in [`catalog/sources/README.md`](catalog/sources/README.md).
 
-## Rules
+## Repository rules
 
-1. **External sources only.** A catalogue entry must point to a repository maintained outside this repository owner’s projects.
-2. **Reference, never vendor.** Do not copy `SKILL.md`, nested rules, scripts, data, or licences into this repository.
-3. **Canonical upstream links only.** Do not point cards at local forks, adaptations, or downstream copies.
-4. **One card per useful skill.** Bundles are split into individual cards so they are easy to browse by purpose.
-5. **Refresh from upstream.** When using a skill, follow its source link and take the current version rather than relying on an old copied implementation.
-6. **No project provenance.** The catalogue intentionally does not record which private or public projects happen to use a skill.
+1. **Never vendor external skill bodies.** External `SKILL.md`, scripts, nested rules, datasets, and licence files remain upstream.
+2. **Canonical sources only.** External cards point to the original/current upstream repository, not a downstream project copy.
+3. **Bespoke means genuinely first-party.** Full content is allowed under `bespoke/` only for original reusable material maintained by this repository owner; adapted external material must retain clear provenance or remain a pointer.
+4. **Research is dated.** Stars, forks, and activity are discovery/adoption proxies, not exact installation counts. Re-check live GitHub before treating a ranking as current.
+5. **Prefer useful structure over mirrors.** Very large repositories get a source card and upstream browse link rather than hundreds of stale copied skill summaries.
