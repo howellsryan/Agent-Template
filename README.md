@@ -1,53 +1,63 @@
-# Agentic Dev Template
+# Agent Template Catalogue
 
-A starting point for setting up a new repository for AI-agent-assisted development (Claude Code and compatible tools). Drop this into a fresh repo and adapt.
+A curated open-source map of useful Agent Skills, rules, helpers, skill repositories, and reusable agent workflows.
 
-## What's in here
+The goal is simple: **make good agent resources easy to rediscover without turning this repository into a stale copy of everybody else's work.**
 
+## Start here
+
+| I want to… | Go to |
+| --- | --- |
+| Browse specific skills | [`SKILLS.md`](SKILLS.md) |
+| Discover prominent upstream skill repositories | [`catalog/sources/README.md`](catalog/sources/README.md) |
+| Install the first-party delivery workflow | [`bespoke/delivery-loop/INSTALL.md`](bespoke/delivery-loop/INSTALL.md) |
+| Understand how this catalogue is maintained | [`CONTRIBUTING.md`](CONTRIBUTING.md) |
+| Review a catalogue change before publishing | [`bespoke/catalog-review/README.md`](bespoke/catalog-review/README.md) |
+
+## Two zones, two rules
+
+### `catalog/` — external references only
+
+Third-party implementations stay upstream. Catalogue cards explain what a resource is, why it is useful, where the canonical source lives, and how to get the current version when relevant.
+
+This keeps attribution clear and avoids freezing old copies of external `SKILL.md` files, scripts, rules, datasets, or licences in this repository.
+
+### `bespoke/` — original reusable assets
+
+First-party workflows created and maintained here may live in full so they can be copied as coherent packages. Each package documents its provenance, install shape, dependencies, and portability assumptions.
+
+Current packages:
+
+- [`delivery-loop`](bespoke/delivery-loop/README.md) — single-session Plan → Build → Code Review → Verify delivery discipline.
+- [`catalog-review`](bespoke/catalog-review/README.md) — independent open-source/catalogue review agent and checklist.
+
+## Layout
+
+```text
+catalog/
+├── workflow-hygiene/       # individual external workflow/debugging skills
+├── ui-ux/                  # individual UI/UX skill references
+├── frontend-engineering/   # individual frontend skill references
+├── threejs/                # individual Three.js skill references
+└── sources/                # prominent upstream libraries, standards and indexes
+
+bespoke/
+├── delivery-loop/          # full first-party delivery workflow
+└── catalog-review/         # full first-party review agent
 ```
-<repo root>/                     → this repo IS the template; copy the pieces below into yours
-├── CLAUDE.md                    → copy to repo root, fill in the placeholders
-├── SKILLS.md                    → copy to repo root, keep in sync as you add skills/rules
-├── LICENSE
-├── .claude/
-│   ├── skills/                  → model-invoked skills (fire automatically by description match)
-│   │   ├── plan-gate/
-│   │   ├── scope-fence/
-│   │   ├── memory-hygiene/
-│   │   ├── ruthless-editor/
-│   │   └── pr-changelog/
-│   └── rules/                   → path-scoped rules (auto-load when matching files are touched)
-│       ├── README.md
-│       └── example-rule.md
-└── library/                     → BROWSEABLE CATALOG of domain skills, by distinction (inactive shelf)
-    ├── backend/ frontend/ design/ productivity/ performance/
-    ├── token-efficiency/ testing-and-quality/ security/ devops/
-    └── README.md                → the catalog index + how to consume
-```
 
-## Two halves: the active template and the library
+## Research, not a leaderboard
 
-- **The template** (`CLAUDE.md`, `SKILLS.md`, `.claude/`) is the config you copy to your repo root and adapt. Its five skills are *behavioural* disciplines — four domain-agnostic (`plan-gate`, `scope-fence`, `memory-hygiene`, `ruthless-editor`) plus `pr-changelog`, a domain-specific worked example — about *how* to work carefully, not what your product does.
-- **The [`library/`](library/README.md)** is a one-stop-shop catalog of *domain-specific* skills grouped by distinction — backend, frontend, design, productivity, performance, token-efficiency, testing, security, devops. Each category folder has a README explaining what the distinction is, its skills, and when to use them or not. **Nothing in `library/` is active** — it lives outside `.claude/skills/` on purpose, so no agent auto-loads it. You browse it, then copy the skills you want into your repo's `.claude/skills/`. Start at [`library/README.md`](library/README.md).
+There is no reliable public installation counter shared across Claude Code, Codex, Cursor, Copilot, Gemini CLI and other Agent Skills consumers. The source research therefore records **prominent repositories**, using live GitHub adoption signals, current activity, official ownership and specialist usefulness as evidence.
 
-## How to use this
+It is deliberately dated and non-exhaustive. GitHub stars are useful evidence, not usage telemetry, and mutable popularity numbers are not duplicated across source cards.
 
-1. Copy `CLAUDE.md` and `SKILLS.md` to your repo root. Fill in every `<placeholder>`.
-2. Copy `.claude/` to your repo root.
-3. Read each `SKILL.md` — they're generic but written for a game-like project with example prose. Adjust names/examples to your domain. `pr-changelog` in particular assumes a public changelog channel; delete it if you don't have one, or repoint it at your actual publish target.
-4. Delete `.claude/rules/example-rule.md` once you've written your first real rule, or keep it as a live reference.
-5. Update `SKILLS.md` any time you add, remove, or change a skill or rule — it's the map, and a stale map is worse than none.
+## Licensing
 
-## Why this shape
+The original material in this repository is released under the repository's [MIT License](LICENSE).
 
-Agent context is priced per session. This structure is progressive disclosure:
+External catalogue entries are links and summaries only. Their authors retain ownership and their own licences apply if you copy or install anything from upstream. Always check the upstream licence and documentation before redistributing third-party material.
 
-| Tier | Where | Loads | Cost |
-|---|---|---|---|
-| Always-on | `CLAUDE.md` | every session, in full | paid every session — keep it terse |
-| Path-scoped rules | `.claude/rules/*.md` | only when a touched file matches the rule's `paths:` globs | paid only by sessions touching that area |
-| Skills | `.claude/skills/*/SKILL.md` | name + description always visible; full body loads only when the task matches | near-free when dormant |
+## Contributing
 
-The four skills included (`plan-gate`, `scope-fence`, `memory-hygiene`, `ruthless-editor`) are domain-agnostic behavioural disciplines — they encode how to work carefully, not what your product does. `pr-changelog` is included as a worked example of a domain-specific skill built on top of the generic ones (it calls `ruthless-editor`).
-
-Further reading: [Anthropic — Equipping agents for the real world with Agent Skills](https://www.anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills) · [Agent Skills open standard](https://agentskills.io) · [mattpocock/skills](https://github.com/mattpocock/skills).
+See [`CONTRIBUTING.md`](CONTRIBUTING.md). The short version: verify the canonical source, do not vendor third-party bodies, keep mutable research in one dated place, and run the `catalog-review` checklist before proposing a catalogue change.
