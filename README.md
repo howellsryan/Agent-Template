@@ -1,53 +1,40 @@
-# Agentic Dev Template
+# Agent Template Catalogue
 
-A starting point for setting up a new repository for AI-agent-assisted development (Claude Code and compatible tools). Drop this into a fresh repo and adapt.
+A lightweight index of the agent skills, rules, and workflow helpers used across my repositories.
 
-## What's in here
+**This repo is a catalogue, not a vendor mirror.** Do not copy third-party `SKILL.md` files into this repository. Each card explains what a skill does, where its canonical source lives, where I currently use it, and how to fetch the latest version when I need it.
 
-```
-<repo root>/                     → this repo IS the template; copy the pieces below into yours
-├── CLAUDE.md                    → copy to repo root, fill in the placeholders
-├── SKILLS.md                    → copy to repo root, keep in sync as you add skills/rules
-├── LICENSE
-├── .claude/
-│   ├── skills/                  → model-invoked skills (fire automatically by description match)
-│   │   ├── plan-gate/
-│   │   ├── scope-fence/
-│   │   ├── memory-hygiene/
-│   │   ├── ruthless-editor/
-│   │   └── pr-changelog/
-│   └── rules/                   → path-scoped rules (auto-load when matching files are touched)
-│       ├── README.md
-│       └── example-rule.md
-└── library/                     → BROWSEABLE CATALOG of domain skills, by distinction (inactive shelf)
-    ├── backend/ frontend/ design/ productivity/ performance/
-    ├── token-efficiency/ testing-and-quality/ security/ devops/
-    └── README.md                → the catalog index + how to consume
+## Layout
+
+```text
+catalog/
+├── workflow-hygiene/       # planning, scope, debugging, verification, writing hygiene
+├── ui-ux/                  # visual design and interface review
+├── frontend-engineering/   # React/component architecture and performance
+├── threejs/                # Three.js reference skills
+├── project-specific/       # recipes that only make sense in one of my products
+├── rules/                  # pointers to project rule systems, not copied rule bodies
+└── helpers/                # token/context and skill-authoring references
 ```
 
-## Two halves: the active template and the library
+Start with [`SKILLS.md`](SKILLS.md) for the complete inventory or [`catalog/README.md`](catalog/README.md) for the catalogue rules.
 
-- **The template** (`CLAUDE.md`, `SKILLS.md`, `.claude/`) is the config you copy to your repo root and adapt. Its five skills are *behavioural* disciplines — four domain-agnostic (`plan-gate`, `scope-fence`, `memory-hygiene`, `ruthless-editor`) plus `pr-changelog`, a domain-specific worked example — about *how* to work carefully, not what your product does.
-- **The [`library/`](library/README.md)** is a one-stop-shop catalog of *domain-specific* skills grouped by distinction — backend, frontend, design, productivity, performance, token-efficiency, testing, security, devops. Each category folder has a README explaining what the distinction is, its skills, and when to use them or not. **Nothing in `library/` is active** — it lives outside `.claude/skills/` on purpose, so no agent auto-loads it. You browse it, then copy the skills you want into your repo's `.claude/skills/`. Start at [`library/README.md`](library/README.md).
+## Repository audit
 
-## How to use this
+| Repository | Agent material found | Catalogue impact |
+| --- | --- | --- |
+| `3site` | 5 external UI/frontend skills under `.claude/skills/` | Vercel, Anthropic-style frontend design, UI/UX Pro Max |
+| `chat` | shared workflow/hygiene skills plus `frontend-design` and `web-design-guidelines` | confirms the portable shared set |
+| `pitch` | `delivery-loop`, `plan-gate`, `scope-fence`, `systematic-debugging`, `verification-before-completion`, `memory-hygiene` | shared delivery/debugging set |
+| `footy-sim` | `delivery-loop`, `plan-gate`, `scope-fence`, `memory-hygiene` referenced by the contributor guide | shared lightweight set |
+| `pocketRPG` | shared workflow skills, 4 project-native recipes, 10 vendored Three.js references, extensive path-scoped rules | biggest source of first-party recipes and 3D references |
+| `career-catalogue` | contributor guide, no root `.claude/skills` catalogue found | no skill card added |
+| `companion`, `ordermate` | no root `CLAUDE.md`/`SKILLS.md` inventory found in this audit | no skill card added |
 
-1. Copy `CLAUDE.md` and `SKILLS.md` to your repo root. Fill in every `<placeholder>`.
-2. Copy `.claude/` to your repo root.
-3. Read each `SKILL.md` — they're generic but written for a game-like project with example prose. Adjust names/examples to your domain. `pr-changelog` in particular assumes a public changelog channel; delete it if you don't have one, or repoint it at your actual publish target.
-4. Delete `.claude/rules/example-rule.md` once you've written your first real rule, or keep it as a live reference.
-5. Update `SKILLS.md` any time you add, remove, or change a skill or rule — it's the map, and a stale map is worse than none.
+## Rules of this repository
 
-## Why this shape
-
-Agent context is priced per session. This structure is progressive disclosure:
-
-| Tier | Where | Loads | Cost |
-|---|---|---|---|
-| Always-on | `CLAUDE.md` | every session, in full | paid every session — keep it terse |
-| Path-scoped rules | `.claude/rules/*.md` | only when a touched file matches the rule's `paths:` globs | paid only by sessions touching that area |
-| Skills | `.claude/skills/*/SKILL.md` | name + description always visible; full body loads only when the task matches | near-free when dormant |
-
-The four skills included (`plan-gate`, `scope-fence`, `memory-hygiene`, `ruthless-editor`) are domain-agnostic behavioural disciplines — they encode how to work carefully, not what your product does. `pr-changelog` is included as a worked example of a domain-specific skill built on top of the generic ones (it calls `ruthless-editor`).
-
-Further reading: [Anthropic — Equipping agents for the real world with Agent Skills](https://www.anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills) · [Agent Skills open standard](https://agentskills.io) · [mattpocock/skills](https://github.com/mattpocock/skills).
+1. **Reference, never vendor.** External skill bodies stay upstream.
+2. **Prefer canonical upstream links.** A local copy is listed only to show where I use or adapted it.
+3. **One card per skill.** Bundles still get one card per skill so they are easy to browse.
+4. **Keep project-native recipes separate.** They point back to the product repo that owns them.
+5. **Refresh before copying.** Use the source link or install command on the card instead of copying an old local version from another project.
