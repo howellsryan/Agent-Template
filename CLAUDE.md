@@ -1,32 +1,36 @@
-# CLAUDE.md — Agent Template Catalogue
+# CLAUDE.md — External Agent Resource Catalogue
 
 ## Purpose
 
-This repository is a **reference catalogue** for agent skills, rules, and workflow helpers used across my projects. It is not the runtime source for third-party skills and must not become a vendor mirror.
+This repository is a **pointer-only catalogue of external agent skills, rules, and helpers**. It exists to make useful upstream resources easy to rediscover without vendoring their implementations.
 
 ## Non-negotiables
 
-- Never add a third-party `SKILL.md` body here. Add or update a short card in `catalog/` instead.
-- Every external card must link to the canonical GitHub source and say how to fetch/install the latest version.
-- Every first-party card must point to the repository/file that currently owns the implementation.
-- Mark adaptations clearly: upstream source and local adapted source are different things.
-- `SKILLS.md` is the top-level human inventory. Keep it in sync with cards.
-- Project-specific path-scoped rules belong in their product repos. This catalogue stores pointers only.
+- Only catalogue resources whose canonical source is an external repository.
+- Never add copied third-party `SKILL.md` bodies, nested rules, scripts, datasets, or licence files.
+- Never use a downstream/local project as a source link or record where a resource is used.
+- Every card must link directly to the canonical upstream GitHub repository or skill path.
+- `SKILLS.md` is the top-level inventory and must stay in sync with `catalog/`.
+- If provenance is uncertain, omit the card until the upstream source is verified.
 
 ## Card format
 
-Each card should contain: **What it does**, **Type**, **Canonical source**, **Used in**, **Get the latest**, and optional **Notes**. Keep cards short; do not reproduce implementation instructions.
+Each card should contain:
+
+- **What it does** — one short practical summary.
+- **Source** — canonical GitHub repository/skill path.
+- **Get the latest** — how to obtain the current upstream version.
+- **Notes** — optional upstream-specific detail only.
+
+Do not include “used in”, local-copy, fork, adaptation, or project-history fields.
 
 ## Categories
 
-- `catalog/workflow-hygiene/` — delivery, planning, scope, memory, writing, debugging, verification.
-- `catalog/ui-ux/` — interface design and review.
+- `catalog/workflow-hygiene/` — externally sourced workflow/debugging disciplines.
+- `catalog/ui-ux/` — interface design and review resources.
 - `catalog/frontend-engineering/` — React/component/performance guidance.
-- `catalog/threejs/` — Three.js reference bundle cards.
-- `catalog/project-specific/` — product-owned recipes.
-- `catalog/rules/` — pointers to rule systems.
-- `catalog/helpers/` — context/token/authoring helpers.
+- `catalog/threejs/` — Three.js reference skills.
 
 ## Updating
 
-Before adding a new external card, verify the upstream repository still exists and prefer its main branch/release instructions. If a project stops using a skill, update the card's `Used in` list; do not delete the card solely because one repo removed it if it remains part of my working toolkit.
+Before adding or refreshing a card, verify the upstream repository and path still exist. Prefer a stable upstream install command when the project documents one; otherwise link the source and instruct the reader to fetch the current skill directory from upstream.

@@ -1,13 +1,7 @@
 # verification-before-completion
 
-**Type:** Adapted external
+**What it does:** Requires fresh, direct evidence before claiming work is fixed, passing, complete, or ready to hand off.
 
-**What it does:** Requires fresh, direct evidence before claiming a fix, passing build, completed task, commit, PR, or handoff is successful.
+**Source:** https://github.com/obra/superpowers/tree/main/skills/verification-before-completion
 
-**Canonical upstream:** https://github.com/obra/superpowers/tree/main/skills/verification-before-completion
-
-**Local adaptation:** https://github.com/howellsryan/pocketRPG/tree/main/.claude/skills/verification-before-completion
-
-**Used in:** `pocketRPG`, `pitch`, `chat`
-
-**Get the latest:** Fetch upstream, compare its gate with the local version, and preserve repo-specific distinctions between automated and visual/manual proof.
+**Get the latest:** Fetch the current `verification-before-completion` skill directory from `obra/superpowers`.

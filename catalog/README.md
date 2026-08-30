@@ -1,32 +1,23 @@
 # Catalogue conventions
 
-The cards in this directory are intentionally small. They answer **what is this, where is the source of truth, where do I use it, and how do I get the latest copy?**
+Cards are intentionally small. They answer three questions: **what does this do, where is the canonical upstream source, and how do I get the latest version?**
 
-## Types
+## Inclusion rule
 
-- **External upstream** — maintained outside my repositories. Always fetch from upstream.
-- **Adapted external** — upstream concept/body exists, but my project version has local changes. Re-sync deliberately; do not overwrite the adaptation blindly.
-- **First-party portable** — workflow I maintain and reuse across my own repos.
-- **Project-specific** — recipe tied to one product's architecture/data.
+A card belongs here only when the resource comes from an **external repository** and its upstream source can be verified. Do not add first-party workflows, project-specific recipes, downstream adaptations, or synthesized guidance.
 
-## Adding a card
-
-Use this shape:
+## Card shape
 
 ```md
 # name
 
-**Type:** ...
-
 **What it does:** ...
 
-**Canonical source:** <GitHub link>
+**Source:** https://github.com/<upstream-owner>/<repo>/...
 
-**Used in:** `repo`, `repo`
+**Get the latest:** ...
 
-**Get the latest:** <install/copy instruction>
-
-**Notes:** optional provenance/adaptation detail.
+**Notes:** optional upstream-only detail.
 ```
 
-Do not paste the upstream skill body, nested rule files, scripts, data, or licences into this catalogue.
+Do not include local repository names, “used in” fields, copied implementation text, nested rule files, scripts, datasets, or licences.

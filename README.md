@@ -1,40 +1,26 @@
 # Agent Template Catalogue
 
-A lightweight index of the agent skills, rules, and workflow helpers used across my repositories.
+A lightweight, open-source catalogue of **external** agent skills, rules, and helpers that are useful enough to keep bookmarked for future projects.
 
-**This repo is a catalogue, not a vendor mirror.** Do not copy third-party `SKILL.md` files into this repository. Each card explains what a skill does, where its canonical source lives, where I currently use it, and how to fetch the latest version when I need it.
+**This repository is a reference index, not a vendor mirror.** It does not store third-party skill bodies or copies from other projects. Each card gives a short explanation, the canonical upstream GitHub source, and the quickest route to the latest version.
 
 ## Layout
 
 ```text
 catalog/
-├── workflow-hygiene/       # planning, scope, debugging, verification, writing hygiene
+├── workflow-hygiene/       # debugging and completion discipline
 ├── ui-ux/                  # visual design and interface review
 ├── frontend-engineering/   # React/component architecture and performance
-├── threejs/                # Three.js reference skills
-├── project-specific/       # recipes that only make sense in one of my products
-├── rules/                  # pointers to project rule systems, not copied rule bodies
-└── helpers/                # token/context and skill-authoring references
+└── threejs/                # Three.js reference skills
 ```
 
-Start with [`SKILLS.md`](SKILLS.md) for the complete inventory or [`catalog/README.md`](catalog/README.md) for the catalogue rules.
+Start with [`SKILLS.md`](SKILLS.md) for the complete inventory or [`catalog/README.md`](catalog/README.md) for the catalogue conventions.
 
-## Repository audit
+## Rules
 
-| Repository | Agent material found | Catalogue impact |
-| --- | --- | --- |
-| `3site` | 5 external UI/frontend skills under `.claude/skills/` | Vercel, Anthropic-style frontend design, UI/UX Pro Max |
-| `chat` | shared workflow/hygiene skills plus `frontend-design` and `web-design-guidelines` | confirms the portable shared set |
-| `pitch` | `delivery-loop`, `plan-gate`, `scope-fence`, `systematic-debugging`, `verification-before-completion`, `memory-hygiene` | shared delivery/debugging set |
-| `footy-sim` | `delivery-loop`, `plan-gate`, `scope-fence`, `memory-hygiene` referenced by the contributor guide | shared lightweight set |
-| `pocketRPG` | shared workflow skills, 4 project-native recipes, 10 vendored Three.js references, extensive path-scoped rules | biggest source of first-party recipes and 3D references |
-| `career-catalogue` | contributor guide, no root `.claude/skills` catalogue found | no skill card added |
-| `companion`, `ordermate` | no root `CLAUDE.md`/`SKILLS.md` inventory found in this audit | no skill card added |
-
-## Rules of this repository
-
-1. **Reference, never vendor.** External skill bodies stay upstream.
-2. **Prefer canonical upstream links.** A local copy is listed only to show where I use or adapted it.
-3. **One card per skill.** Bundles still get one card per skill so they are easy to browse.
-4. **Keep project-native recipes separate.** They point back to the product repo that owns them.
-5. **Refresh before copying.** Use the source link or install command on the card instead of copying an old local version from another project.
+1. **External sources only.** A catalogue entry must point to a repository maintained outside this repository owner’s projects.
+2. **Reference, never vendor.** Do not copy `SKILL.md`, nested rules, scripts, data, or licences into this repository.
+3. **Canonical upstream links only.** Do not point cards at local forks, adaptations, or downstream copies.
+4. **One card per useful skill.** Bundles are split into individual cards so they are easy to browse by purpose.
+5. **Refresh from upstream.** When using a skill, follow its source link and take the current version rather than relying on an old copied implementation.
+6. **No project provenance.** The catalogue intentionally does not record which private or public projects happen to use a skill.
