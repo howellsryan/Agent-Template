@@ -1,11 +1,9 @@
 # github/awesome-copilot
 
-**Kind:** Official/community instructions, agents and skills collection.
+**Kind:** Official/community Copilot resource library.
 
-**What it offers:** Community-contributed instructions, agents, skills and configurations for GitHub Copilot, with many patterns transferable to other Agent Skills-compatible tools.
+**What it offers:** GitHub-maintained community agents, instructions, prompts, skills and configurations for GitHub Copilot.
 
 **Source:** https://github.com/github/awesome-copilot
 
-**Adoption snapshot:** ~38k GitHub stars on 2026-08-30.
-
-**Use it for:** Browsing reusable agent configurations and task skills; verify each item's own provenance before treating GitHub's collection as the implementation owner.
+**Use it for:** Discovering reusable Copilot customisation patterns and skill/instruction examples. It is broader than the Agent Skills format alone.

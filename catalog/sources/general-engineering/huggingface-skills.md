@@ -1,11 +1,9 @@
 # huggingface/skills
 
-**Kind:** Official ecosystem skill library.
+**Kind:** Official vendor skill library.
 
-**What it offers:** Skills that teach agents workflows across the Hugging Face ecosystem.
+**What it offers:** Hugging Face-maintained reusable skills for its ecosystem and common model/data workflows.
 
 **Source:** https://github.com/huggingface/skills
 
-**Adoption snapshot:** ~11k GitHub stars on 2026-08-30.
-
-**Use it for:** Model, dataset, Hub, inference and related Hugging Face workflows; fetch current upstream skill folders.
+**Use it for:** Current upstream guidance and task skills around Hugging Face tooling and workflows.

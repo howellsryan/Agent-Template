@@ -1,11 +1,9 @@
 # multica-ai/andrej-karpathy-skills
 
-**Kind:** Single behavioural coding-agent skill/rule set.
+**Kind:** Behavioural coding-instructions helper.
 
-**What it offers:** A compact set of coding-agent guardrails built around thinking before coding, simplicity, surgical changes and goal-driven verification.
+**What it offers:** A compact `CLAUDE.md`-style set of coding-behaviour guidance derived from Andrej Karpathy's observations about LLM coding pitfalls.
 
 **Source:** https://github.com/multica-ai/andrej-karpathy-skills
 
-**Adoption snapshot:** ~206k GitHub stars on 2026-08-30.
-
-**Use it for:** A lightweight always-on behavioural layer rather than a task-specific capability library.
+**Use it for:** A lightweight behavioural rule set. Treat it as an agent-instructions helper, not as a conventional multi-skill library.

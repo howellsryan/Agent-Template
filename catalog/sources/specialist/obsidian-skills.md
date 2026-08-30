@@ -1,11 +1,9 @@
 # kepano/obsidian-skills
 
-**Kind:** Obsidian/open-format specialist skill library.
+**Kind:** Specialist skill collection.
 
-**What it offers:** Skills that teach agents to work with Obsidian CLI and open formats including Markdown, Bases and JSON Canvas.
+**What it offers:** Reusable skills and conventions for working with Obsidian and related open Markdown-based workflows.
 
 **Source:** https://github.com/kepano/obsidian-skills
 
-**Adoption snapshot:** ~47k GitHub stars on 2026-08-30.
-
-**Use it for:** Reliable Obsidian-vault and open-format workflows instead of generic Markdown-only guidance.
+**Use it for:** Obsidian-specific agent workflows and examples of focused domain skills.

@@ -1,11 +1,9 @@
 # obra/superpowers
 
-**Kind:** Workflow skill library and software-development methodology.
+**Kind:** Agentic development methodology and skill library.
 
-**What it offers:** A highly adopted set of coding-agent disciplines covering brainstorming, planning, execution, test-driven development, systematic debugging, verification, review, and related software-delivery workflows.
+**What it offers:** A structured software-delivery methodology backed by reusable skills for planning, debugging, verification and development workflow discipline.
 
 **Source:** https://github.com/obra/superpowers
 
-**Adoption snapshot:** ~279k GitHub stars on 2026-08-30.
-
-**Use it for:** Strong behavioural/process skills where you want explicit gates rather than broad coding advice. Follow upstream installation/update instructions for the current agent.
+**Use it for:** Workflow/hygiene skills and a coherent agentic software-development process. This catalogue directly points to its `systematic-debugging` and `verification-before-completion` skills.

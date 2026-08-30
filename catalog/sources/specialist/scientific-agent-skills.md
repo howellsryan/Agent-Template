@@ -1,11 +1,9 @@
 # K-Dense-AI/scientific-agent-skills
 
-**Kind:** Scientific research skill library.
+**Kind:** Scientific/research skill library.
 
-**What it offers:** A large validated collection for biology, chemistry, medicine, drug discovery, scientific databases, writing and research workflows.
+**What it offers:** A large specialist collection for scientific research, analysis and domain workflows.
 
 **Source:** https://github.com/K-Dense-AI/scientific-agent-skills
 
-**Adoption snapshot:** ~38k GitHub stars on 2026-08-30.
-
-**Use it for:** Science/research tasks that benefit from specialist databases and validated domain workflows.
+**Use it for:** Research-heavy scientific tasks where a broad general coding-skill library is too shallow.

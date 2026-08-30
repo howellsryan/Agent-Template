@@ -1,10 +1,11 @@
 # Skills, Sources & Agent Helpers
 
-This is the browseable index for the repository.
+This is the browseable inventory for the repository. External implementations stay in their upstream repositories; original reusable packages live under `bespoke/`.
 
 ## Bespoke first-party packages
 
-- [`delivery-loop`](bespoke/delivery-loop/README.md) — a complete single-session implementation workflow: triage → Plan → optional Architect → Build → Code Review → Verify, with no delivery subagents. Includes generic step charters, design rationale, install snippet, `plan-gate`, and `scope-fence` companions.
+- [`delivery-loop`](bespoke/delivery-loop/README.md) — single-session implementation workflow: triage → Plan → optional Architect → Build → Code Review → Verify. Includes install guidance plus first-party `plan-gate` and `scope-fence` companions.
+- [`catalog-review`](bespoke/catalog-review/README.md) — independent review agent for requirement fit, provenance/licensing, research integrity, readability, installability and open-source readiness.
 
 ## Individual external skills
 
@@ -16,7 +17,7 @@ This is the browseable index for the repository.
 ### UI / UX
 
 - [`frontend-design`](catalog/ui-ux/frontend-design.md) — distinctive production-grade interface design from Anthropic.
-- [`ui-ux-pro-max`](catalog/ui-ux/ui-ux-pro-max.md) — searchable design-system, palette, typography, UX, motion, and chart guidance.
+- [`ui-ux-pro-max`](catalog/ui-ux/ui-ux-pro-max.md) — design-system, palette, typography, UX, motion and chart guidance.
 - [`web-design-guidelines`](catalog/ui-ux/web-design-guidelines.md) — Vercel interface/accessibility review guidance.
 
 ### Frontend engineering
@@ -39,9 +40,9 @@ This is the browseable index for the repository.
 
 ## Prominent upstream repositories
 
-See [`catalog/sources/README.md`](catalog/sources/README.md) for the dated ranking and methodology.
+The dated selection method and grouping live in [`catalog/sources/README.md`](catalog/sources/README.md). This inventory links the cards without duplicating mutable popularity metrics.
 
-### Broad engineering / general-purpose
+### Engineering / general-purpose
 
 - [`obra/superpowers`](catalog/sources/general-engineering/obra-superpowers.md)
 - [`mattpocock/skills`](catalog/sources/general-engineering/mattpocock-skills.md)
@@ -64,9 +65,15 @@ See [`catalog/sources/README.md`](catalog/sources/README.md) for the dated ranki
 - [`K-Dense-AI/scientific-agent-skills`](catalog/sources/specialist/scientific-agent-skills.md)
 - [`JuliusBrussee/caveman`](catalog/sources/specialist/caveman.md)
 
-### Standards / discovery / large indexes
+### Standards / discovery / harnesses
 
 - [`agentskills/agentskills`](catalog/sources/standards-and-discovery/agentskills-standard.md)
 - [`sickn33/agentic-awesome-skills`](catalog/sources/standards-and-discovery/agentic-awesome-skills.md)
 - [`ComposioHQ/awesome-claude-skills`](catalog/sources/standards-and-discovery/awesome-claude-skills.md)
-- [`affaan-m/ECC`](catalog/sources/standards-and-discovery/everything-claude-code.md)
+- [`affaan-m/ECC`](catalog/sources/standards-and-discovery/ecc.md)
+
+## Maintainer docs
+
+- [`CONTRIBUTING.md`](CONTRIBUTING.md) — how to add/refresh catalogue and bespoke material.
+- [`catalog/README.md`](catalog/README.md) — external-card conventions.
+- [`bespoke/catalog-review/checklist.md`](bespoke/catalog-review/checklist.md) — pre-publication review gate.

@@ -1,11 +1,9 @@
 # agentskills/agentskills
 
-**Kind:** Open standard and documentation, not a general skill library.
+**Kind:** Open Agent Skills standard.
 
-**What it offers:** The Agent Skills specification, guides, examples and compatibility model used across a growing number of agent clients.
+**What it offers:** The specification, documentation and reference material for the Agent Skills format.
 
 **Source:** https://github.com/agentskills/agentskills
 
-**Adoption snapshot:** ~25k GitHub stars on 2026-08-30.
-
-**Use it for:** Authoring/validation semantics and interoperability decisions. Do not treat it as the upstream owner of third-party skills merely because they follow the standard.
+**Use it for:** Format/authoring guidance and interoperability context. This is a standard/reference source, not a library of task-specific skills.

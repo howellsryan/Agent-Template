@@ -1,11 +1,9 @@
 # openai/skills
 
-**Kind:** Official Codex skills catalogue.
+**Kind:** Official Codex skill library.
 
-**What it offers:** OpenAI-maintained Agent Skills distributed for Codex, including curated and experimental skill directories and installer-compatible structure.
+**What it offers:** OpenAI-maintained skills and examples distributed for Codex-compatible workflows.
 
 **Source:** https://github.com/openai/skills
 
-**Adoption snapshot:** ~25k GitHub stars on 2026-08-30.
-
-**Use it for:** Canonical Codex skill implementations and examples. Prefer the repository's current curated/experimental install guidance.
+**Use it for:** Canonical current Codex skill implementations and repository structure. Follow the upstream README for current curated/experimental guidance.

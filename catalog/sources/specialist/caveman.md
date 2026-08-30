@@ -1,11 +1,9 @@
 # JuliusBrussee/caveman
 
-**Kind:** Token-efficiency / coding-behaviour skill.
+**Kind:** Behaviour/token-efficiency helper.
 
-**What it offers:** A cross-agent skill focused on aggressively reducing unnecessary token use and verbosity while preserving useful execution behaviour.
+**What it offers:** Compact guidance aimed at making coding-agent behaviour simpler, more direct and less context-expensive.
 
 **Source:** https://github.com/JuliusBrussee/caveman
 
-**Adoption snapshot:** ~61k GitHub stars on 2026-08-30.
-
-**Use it for:** Studying or installing an opinionated token-efficiency layer. Review its trade-offs before combining it with workflows that require detailed evidence or handoffs.
+**Use it for:** Exploring terse coding-agent behaviour and token-efficiency ideas; read the upstream instructions before adopting them wholesale.

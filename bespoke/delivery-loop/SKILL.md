@@ -27,13 +27,13 @@ Read `steps.md` once for the step charters. Announce entry on one line (`step: p
 2. **Architect (optional)** — run before editing when the work is novel, multi-system, persistence/schema, security/trust-boundary or build-pipeline design. Set ownership and sequencing while a wrong turn is cheap.
 3. **Build (as needed)** — implement the scoped change using the repository's existing patterns and source-of-truth boundaries.
 4. **Code Review (always)** — review the working diff itself for correctness, simplification/reuse opportunities, accidental scope, security/integrity issues and maintainability. Verdict PASS/FAIL with concrete failure scenarios. FAIL returns to Build, then Code Review runs again.
-5. **Verify (always)** — adversarially check the finished change against Plan's success criteria using fresh tests/builds/observations. Player/user-visible work gets a visual/interaction check when the environment allows it. FAIL returns to Build; because the diff changed, Code Review runs again before Verify.
+5. **Verify (always)** — adversarially check the finished change against Plan's success criteria using fresh tests/builds/observations. User-visible work gets a visual/interaction check when the environment allows it. FAIL returns to Build; because the diff changed, Code Review runs again before Verify.
 
 Commit, PR or completion claims happen only after Verify passes.
 
 ## Companion disciplines
 
-- `companions/plan-gate` — makes the Plan step mandatory and evidence-backed for risky/novel work.
-- `companions/scope-fence` — keeps Build and review inside the requested boundary.
+- `plan-gate` — makes the Plan step mandatory and evidence-backed for risky/novel work; the first-party implementation is packaged under `companions/` in this source repository and installs as a sibling skill.
+- `scope-fence` — keeps Build and review inside the requested boundary; the first-party implementation is packaged under `companions/` in this source repository and installs as a sibling skill.
 - `systematic-debugging` — use when the task begins with a broken thing; canonical upstream is `obra/superpowers` (see `dependencies.md`).
 - `verification-before-completion` — external evidence standard for the Verify gate; canonical upstream is `obra/superpowers`.

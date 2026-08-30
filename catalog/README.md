@@ -1,6 +1,6 @@
 # Catalogue conventions
 
-`catalog/` is **external-source only**. It is intentionally pointer-first so this repository stays useful without becoming a stale vendor mirror.
+`catalog/` is **external-source only**. It is pointer-first so this repository stays useful without becoming a stale vendor mirror.
 
 ## Individual skill cards
 
@@ -15,13 +15,16 @@ A card should answer:
 
 ## Source repository cards
 
-`catalog/sources/` captures prominent skill libraries, specialist collections, standards, and discovery indexes. Very large repositories get **one source card**, not hundreds of copied or hand-maintained skill cards.
+`catalog/sources/` captures prominent skill libraries, specialist collections, standards, harnesses, helpers, and discovery indexes. Very large repositories get **one source card**, not hundreds of copied or hand-maintained skill cards.
 
-Source cards may include a dated GitHub adoption snapshot, but stars/forks/activity are only discovery proxies. Exact installations are generally not public.
+Source cards describe the resource and its purpose. Mutable adoption metrics do not belong in individual cards; dated ecosystem research lives only in [`sources/README.md`](sources/README.md).
 
 ## What never belongs here
 
 - copied external `SKILL.md` bodies;
-- scripts, datasets, nested reference directories, or licences copied from upstream;
+- scripts, datasets, nested reference directories, rules, or licences copied from upstream;
 - downstream/private project links or “used in” fields;
-- first-party workflows (those belong under `bespoke/`).
+- first-party workflows (those belong under `bespoke/`);
+- undated claims that a repository is “the most used”, “the biggest”, or otherwise permanently ranked.
+
+See [`CONTRIBUTING.md`](../CONTRIBUTING.md) for the contribution checklist.

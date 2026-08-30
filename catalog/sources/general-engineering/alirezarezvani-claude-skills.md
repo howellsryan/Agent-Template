@@ -1,11 +1,9 @@
 # alirezarezvani/claude-skills
 
-**Kind:** Large multi-domain skill/plugin library.
+**Kind:** Broad multi-domain skill/plugin collection.
 
-**What it offers:** Hundreds of skills across engineering, DevOps, security, data/ML, business and specialist domains, with scripts and reference material and support for multiple coding-agent formats.
+**What it offers:** Reusable skills spanning engineering, product, marketing, compliance and other professional domains, with support for multiple coding-agent environments.
 
 **Source:** https://github.com/alirezarezvani/claude-skills
 
-**Adoption snapshot:** ~25k GitHub stars on 2026-08-30.
-
-**Use it for:** Broad discovery when you need a domain-specific workflow not covered by the smaller canonical collections.
+**Use it for:** Browsing a large cross-domain catalogue when you need more than software-development-only skills.

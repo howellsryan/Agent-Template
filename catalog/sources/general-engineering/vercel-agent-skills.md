@@ -2,10 +2,8 @@
 
 **Kind:** Official web/frontend skill library.
 
-**What it offers:** Vercel-maintained skills for React/Next.js performance, component composition, web interface review, deployment, and related web-engineering workflows.
+**What it offers:** Vercel-maintained reusable skills covering frontend design, React composition/performance and web-interface review.
 
 **Source:** https://github.com/vercel-labs/agent-skills
 
-**Adoption snapshot:** ~31k GitHub stars on 2026-08-30.
-
-**Get the latest:** `npx skills add vercel-labs/agent-skills` or follow the repository's current install instructions.
+**Use it for:** Current upstream web/frontend engineering skills. Several individual cards in this catalogue point into this repository.
