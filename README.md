@@ -1,6 +1,6 @@
 # Agent Template Catalogue
 
-A curated open-source map of useful Agent Skills, rules, helpers, skill repositories, and reusable agent workflows.
+A curated map of useful agent resources and a versioned marketplace for reusable first-party skills.
 
 The goal is simple: **make good agent resources easy to rediscover without turning this repository into a stale copy of everybody else's work.**
 
@@ -10,11 +10,12 @@ The goal is simple: **make good agent resources easy to rediscover without turni
 | --- | --- |
 | Browse specific skills | [`SKILLS.md`](SKILLS.md) |
 | Discover prominent upstream skill repositories | [`catalog/sources/README.md`](catalog/sources/README.md) |
-| Install the first-party delivery workflow | [`bespoke/delivery-loop/INSTALL.md`](bespoke/delivery-loop/INSTALL.md) |
+| Install shared workflows across repositories | [Distribution guide](docs/distribution.md) |
+| Browse the installable plugin | [Engineering Workflow](plugins/engineering-workflow/README.md) |
 | Understand how this catalogue is maintained | [`CONTRIBUTING.md`](CONTRIBUTING.md) |
 | Review a catalogue change before publishing | [`bespoke/catalog-review/README.md`](bespoke/catalog-review/README.md) |
 
-## Two zones, two rules
+## Sources and distribution
 
 ### `catalog/` — external references only
 
@@ -24,11 +25,11 @@ This keeps attribution clear and avoids freezing old copies of external `SKILL.m
 
 ### `bespoke/` — original reusable assets
 
-First-party workflows created and maintained here may live in full so they can be copied as coherent packages. Each package documents its provenance, install shape, dependencies, and portability assumptions.
+First-party review resources live here in full. Installable workflows live once under `plugins/`, with host-specific manifests around the same skill directories. Each package documents its provenance, install shape, dependencies, and portability assumptions.
 
 Current packages:
 
-- [`delivery-loop`](bespoke/delivery-loop/README.md) — single-session Plan → Build → Code Review → Verify delivery discipline.
+- [Engineering Workflow](plugins/engineering-workflow/README.md) — delivery-loop, plan-gate, scope-fence and memory-hygiene, distributed via Codex/Claude manifests or a pinned repository bootstrap.
 - [`catalog-review`](bespoke/catalog-review/README.md) — independent open-source/catalogue review agent and checklist.
 
 ## Layout
@@ -42,8 +43,13 @@ catalog/
 └── sources/                # prominent upstream libraries, standards and indexes
 
 bespoke/
-├── delivery-loop/          # full first-party delivery workflow
+├── delivery-loop/          # compatibility links to the plugin
 └── catalog-review/         # full first-party review agent
+
+plugins/engineering-workflow/ # one maintained skill source
+profiles/                    # pinned external skill selections
+scripts/                     # shared installer and validators
+templates/                   # small consumer bootstrap loader
 ```
 
 ## Research, not a leaderboard

@@ -1,10 +1,10 @@
 # Skills, Sources & Agent Helpers
 
-This is the browseable inventory for the repository. External implementations stay in their upstream repositories; original reusable packages live under `bespoke/`.
+This is the browseable inventory for the repository. External implementations stay in their upstream repositories; original reusable assets live under `bespoke/` and installable packages under `plugins/`.
 
 ## Bespoke first-party packages
 
-- [`delivery-loop`](bespoke/delivery-loop/README.md) — single-session implementation workflow: triage → Plan → optional Architect → Build → Code Review → Verify. Includes install guidance plus first-party `plan-gate` and `scope-fence` companions.
+- [Engineering Workflow](plugins/engineering-workflow/README.md) — one installable package containing delivery-loop, plan-gate, scope-fence and memory-hygiene. See [installation](docs/distribution.md).
 - [`catalog-review`](bespoke/catalog-review/README.md) — independent review agent for requirement fit, provenance/licensing, research integrity, readability, installability and open-source readiness.
 
 ## Individual external skills
