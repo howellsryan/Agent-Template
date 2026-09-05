@@ -1,6 +1,6 @@
 ---
 name: delivery-loop
-description: Use at the START of every implementation task, before the first edit. Triage the work as spike/checklist/stepped, then for stepped work run Plan -> optional Architect -> Build -> Code Review -> Verify inside this one continuous session. Code Review and Verify are mandatory gates. Do not use for pure questions/research, and do not re-invoke mid-task once the loop has started.
+description: Use at the start of implementation work before the first edit, especially cross-layer changes requiring planning, code review and verification. Do not use for pure questions or research, or re-invoke after the loop has already started.
 ---
 
 # delivery-loop: one session, gated steps
@@ -29,11 +29,19 @@ Read `steps.md` once for the step charters. Announce entry on one line (`step: p
 4. **Code Review (always)** — review the working diff itself for correctness, simplification/reuse opportunities, accidental scope, security/integrity issues and maintainability. Verdict PASS/FAIL with concrete failure scenarios. FAIL returns to Build, then Code Review runs again.
 5. **Verify (always)** — adversarially check the finished change against Plan's success criteria using fresh tests/builds/observations. User-visible work gets a visual/interaction check when the environment allows it. FAIL returns to Build; because the diff changed, Code Review runs again before Verify.
 
-Commit, PR or completion claims happen only after Verify passes.
+Commit or completion claims happen only after Verify passes. A draft PR may expose a concrete, verified slice while clearly listing outstanding release gates; do not describe it as complete.
+
+Read the destination repository’s contributor instructions for build/test commands,
+plan-gate triggers, visual checks, commit policy and final handoff. Those
+project-specific requirements remain binding. This skill grants no additional
+permissions and does not override the user or host.
+
+Code Review is performed using the charter in `steps.md`; it does not require an
+unlisted `code-review` skill or a separate reviewer agent.
 
 ## Companion disciplines
 
-- `plan-gate` — makes the Plan step mandatory and evidence-backed for risky/novel work; the first-party implementation is packaged under `companions/` in this source repository and installs as a sibling skill.
-- `scope-fence` — keeps Build and review inside the requested boundary; the first-party implementation is packaged under `companions/` in this source repository and installs as a sibling skill.
-- `systematic-debugging` — use when the task begins with a broken thing; canonical upstream is `obra/superpowers` (see `dependencies.md`).
+- `plan-gate` — makes the Plan step mandatory and evidence-backed for risky/novel work; available as a sibling skill in this plugin.
+- `scope-fence` — keeps Build and review inside the requested boundary; available as a sibling skill in this plugin.
+- `systematic-debugging` — use when the task begins with a broken thing; canonical upstream is `obra/superpowers` (installed separately by the repository bootstrap).
 - `verification-before-completion` — external evidence standard for the Verify gate; canonical upstream is `obra/superpowers`.

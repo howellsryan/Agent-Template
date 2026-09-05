@@ -1,0 +1,13 @@
+{
+  "name": "ryan-agents",
+  "owner": {
+    "name": "Ryan Howells"
+  },
+  "plugins": [
+    {
+      "name": "engineering-workflow",
+      "source": "./plugins/engineering-workflow",
+      "description": "Portable, single-session engineering delivery and instruction hygiene."
+    }
+  ]
+}

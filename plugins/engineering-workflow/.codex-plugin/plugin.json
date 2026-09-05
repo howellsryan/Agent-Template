@@ -1,0 +1,20 @@
+{
+  "name": "engineering-workflow",
+  "version": "1.0.0",
+  "description": "Portable, single-session engineering delivery and instruction hygiene.",
+  "author": {
+    "name": "Ryan Howells"
+  },
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Engineering Workflow",
+    "shortDescription": "Plan, build, review and verify with shared workflows.",
+    "longDescription": "Reusable engineering workflows with project-owned commands and invariants.",
+    "developerName": "Ryan Howells",
+    "category": "Productivity",
+    "capabilities": [],
+    "defaultPrompt": "Use the engineering workflow for this repository task."
+  },
+  "license": "MIT",
+  "repository": "https://github.com/howellsryan/Agent-Template"
+}

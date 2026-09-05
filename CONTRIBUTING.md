@@ -69,18 +69,25 @@ A source can be worth including without being highly starred when it is an offic
 
 ## Adding or changing bespoke material
 
-Full content under `bespoke/` must be original first-party material or carry explicit, compatible provenance and licensing.
+Full content under `bespoke/` or `plugins/` must be original first-party material or carry explicit, compatible provenance and licensing.
 
 Every bespoke package needs:
 
 - a README explaining purpose and provenance;
-- a clear install/copy path;
+- a clear install/update path;
 - dependency documentation;
 - product-neutral defaults unless explicitly domain-specific;
 - no broken relative references after installation;
 - enough context for a stranger to use it without access to another repository.
 
 External dependencies should normally remain upstream pointers rather than vendored copies.
+
+## Plugin distribution changes
+
+Follow [distribution and updates](docs/distribution.md). Keep each skill body in
+one maintained directory. Pin upstream sources in `profiles/engineering.json`
+and leave their implementations upstream. Run the distribution validator and
+installer tests; bump both host manifest versions when releasing changed plugins.
 
 ## Before opening a PR
 

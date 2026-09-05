@@ -1,0 +1,10 @@
+{
+  "name": "engineering-workflow",
+  "version": "1.0.0",
+  "description": "Portable, single-session engineering delivery and instruction hygiene.",
+  "author": {
+    "name": "Ryan Howells"
+  },
+  "license": "MIT",
+  "repository": "https://github.com/howellsryan/Agent-Template"
+}

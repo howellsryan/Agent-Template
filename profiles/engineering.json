@@ -1,0 +1,13 @@
+{
+  "sources": [
+    {
+      "repository": "obra/superpowers",
+      "revision": "b36e0829c6d0140e93cfef2ca599b1b07d4a7797",
+      "skills": {
+        "systematic-debugging": "skills/systematic-debugging",
+        "verification-before-completion": "skills/verification-before-completion",
+        "test-driven-development": "skills/test-driven-development"
+      }
+    }
+  ]
+}
