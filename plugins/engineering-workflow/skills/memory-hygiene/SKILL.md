@@ -21,3 +21,13 @@ non-obvious constraints; avoid copying facts that are obvious from the code.
   not automatically a rule for every future task or repository.
 - When editing shared guidance, inspect at least one consuming repository for
   incompatible assumptions. Never edit installed caches as the maintained source.
+- Keep a small, stable root contract and one canonical source for each rule.
+  Route subsystem details by task/path; keep changing status and dated evidence
+  in their existing roadmap or delivery record. Do not load every reference by
+  default, and do not rely on another host's automatic rule discovery.
+- Before consolidation, inventory unique constraints in every old entrypoint,
+  reconcile conflicts against current evidence, and preserve their routing.
+  Compatibility wrappers should point to the canonical guide rather than copy it.
+- Treat file bytes as a context-size proxy, not a measured token or cache saving.
+  Stable instruction content helps reuse only when the host's preceding rendered
+  context also matches; Markdown cannot configure a managed host's API cache.

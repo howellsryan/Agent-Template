@@ -6,7 +6,8 @@ GitHub access, network permissions, an MCP server or background automation.
 
 ## Contents and ownership
 
-- `skills/delivery-loop/` — loop control and the self-contained review/verify charters.
+- `skills/delivery-loop/` — loop control, selective context loading, reuse review and
+  self-contained review/verify charters; `measurement.md` is optional evaluation guidance.
 - `skills/plan-gate/` — evidence-backed planning before high-impact changes.
 - `skills/scope-fence/` — complete the requested work without incidental cleanup.
 - `skills/memory-hygiene/` — maintain durable instructions without stale copies.
