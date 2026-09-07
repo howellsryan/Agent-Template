@@ -66,6 +66,13 @@ Look for:
 
 Verdict **PASS** or **FAIL**. Every FAIL finding names the location and concrete failure scenario. FAIL → Build fixes findings → Code Review runs again until PASS.
 
+For new helpers, abstractions or dependencies, check whether the existing domain
+owner, standard library, native platform or an installed dependency already meets
+the complete requirement. Prefer the simplest maintainable option with equivalent
+behaviour. Do not optimise for line count, collapse useful module boundaries,
+drop requested scope, or remove validation, accessibility or regression coverage.
+Report a simplification only when its concrete benefit justifies the change.
+
 **Handoff:** verdict, resolved findings and risks Verify must exercise.
 
 ## Verify — always

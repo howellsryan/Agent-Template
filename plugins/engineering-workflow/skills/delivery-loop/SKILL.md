@@ -39,6 +39,25 @@ permissions and does not override the user or host.
 Code Review is performed using the charter in `steps.md`; it does not require an
 unlisted `code-review` skill or a separate reviewer agent.
 
+## Context discipline
+
+Load applicable skills and their required references once per unchanged revision;
+reuse them while they remain in context. Search for relevant paths before broad
+reads, then read enough surrounding code and callers to understand the boundary.
+Filter large search/API responses before returning them to the conversation;
+keep complete logs outside the prompt and surface failures plus a concise result.
+Re-read when files change, evidence is missing or compaction loses needed detail.
+
+Keep one coherent task in this session and append corrections and results instead
+of repeatedly rewriting its brief. Keep stable instructions separate from task
+status; do not freeze stale facts or delay necessary compaction for caching.
+Do not pad prompts, repeat skill text, or add calls merely to warm a cache.
+Preserve verification evidence, limitations and the repository's final handoff.
+
+For an explicitly requested efficiency evaluation, read
+[measurement.md](measurement.md). Routine delivery does not load that reference
+or run an extra benchmark.
+
 ## Companion disciplines
 
 - `plan-gate` — makes the Plan step mandatory and evidence-backed for risky/novel work; available as a sibling skill in this plugin.
